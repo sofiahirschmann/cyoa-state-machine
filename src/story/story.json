@@ -1,0 +1,226 @@
+{
+  "title": "The Keeper's Last Night",
+  "start": "arrival",
+  "nodes": [
+    {
+      "id": "arrival",
+      "label": "Arrival",
+      "text": "The ferry drops you at Gray Hollow Light an hour before dusk. The keeper, your uncle Silas, hasn't answered a letter in three months. The tower stands black against a bruised sky, and the lamp — which should never be dark — is dark. The ferryman won't wait. \"Last boat's at dawn,\" he says, and pushes off.",
+      "choices": [
+        { "label": "Head straight up to the tower", "target": "tower_door" },
+        { "label": "Check the keeper's cottage first", "target": "cottage" }
+      ]
+    },
+    {
+      "id": "cottage",
+      "label": "The Cottage",
+      "text": "The cottage door hangs open. Inside: a cold stove, a chair knocked over, and Silas's logbook on the table, its last pages torn out. A single page remains, pinned under a whale-oil tin. It reads: \"The light must not go out. Not for her. Not again.\"",
+      "choices": [
+        { "label": "Take the logbook page and the oil tin", "target": "take_supplies" },
+        { "label": "Leave everything and go to the tower", "target": "tower_door" }
+      ]
+    },
+    {
+      "id": "take_supplies",
+      "label": "Supplies",
+      "text": "You pocket the page and heft the oil tin — nearly full, enough to feed the lamp for one night. As you step out, you notice wet footprints on the path. Bare feet. Leading from the sea to the tower. None leading back.",
+      "choices": [
+        { "label": "Follow the footprints to the tower", "target": "tower_door" },
+        { "label": "Follow them backward, down to the shore", "target": "shore" }
+      ]
+    },
+    {
+      "id": "shore",
+      "label": "The Shore",
+      "text": "The prints begin at the waterline, as if someone walked out of the sea itself. Half-buried in the shingle you find a rowboat, staved in, and a woman's shawl, decades rotted but somehow still wet. The tide is coming in fast. Out on the water, something pale keeps pace with the waves — watching.",
+      "choices": [
+        { "label": "Call out to the pale figure", "target": "call_out" },
+        { "label": "Retreat to the tower before dark", "target": "tower_door" }
+      ]
+    },
+    {
+      "id": "call_out",
+      "label": "Calling Out",
+      "text": "\"Hello?\" Your voice dies against the wind. The pale figure stops. Then it begins moving toward you — not swimming, walking, rising taller with each step as the seabed shallows. Her face is your uncle's drowned bride, lost forty years ago the one night the light failed. Her mouth opens wider than mouths should.",
+      "choices": [
+        { "label": "Run for the tower", "target": "tower_door_hunted" },
+        { "label": "Stand your ground and speak to her", "target": "parley" }
+      ]
+    },
+    {
+      "id": "parley",
+      "label": "The Parley",
+      "text": "You hold up the logbook page like a warrant. \"Silas kept the light for you. Every night for forty years.\" She halts at the waterline. Salt water runs from her eyes, or maybe it's just the sea. \"The light was his apology,\" she says, in a voice like a hull grinding rock. \"It goes out when he does. He is at the top. Choose: tend his light, or tend his ghost.\"",
+      "choices": [
+        { "label": "Promise to keep the light burning", "target": "promise" },
+        { "label": "Ask what happens if it stays dark", "target": "ask_dark" }
+      ]
+    },
+    {
+      "id": "ask_dark",
+      "label": "The Bargain",
+      "text": "\"Then the ships find the rocks,\" she says, \"as mine did. And I am owed a keeper.\" The sea behind her lifts, unhurried and enormous. You understand suddenly that she doesn't want the light at all — she wants someone to sit with her in the dark, forever.",
+      "choices": [
+        { "label": "Refuse her and run for the tower", "target": "tower_door_hunted" },
+        { "label": "Take her cold hand", "target": "ending_drowned" }
+      ]
+    },
+    {
+      "id": "promise",
+      "label": "The Promise",
+      "text": "\"Then climb,\" she says, and the sea sets her down gently, like a secret being kept. \"You have until true dark.\" The water goes flat as hammered tin. You have perhaps twenty minutes, and the tower stairs are two hundred steps.",
+      "choices": [
+        { "label": "Climb the tower", "target": "lamp_room" }
+      ]
+    },
+    {
+      "id": "tower_door",
+      "label": "Tower Door",
+      "text": "The tower door is unlocked, swinging on the wind. Inside, the spiral stairs vanish up into blackness. Somewhere above, a slow drip — and beneath it, faint as breath, a voice singing a sea ballad in a language you almost know. The song is coming DOWN the stairs, getting closer.",
+      "choices": [
+        { "label": "Climb toward the singing", "target": "stairs" },
+        { "label": "Hide in the storeroom under the stairs", "target": "storeroom" }
+      ]
+    },
+    {
+      "id": "tower_door_hunted",
+      "label": "Hunted",
+      "text": "You reach the tower with the sound of wet footsteps quickening behind you. You slam the iron door and throw the bolt. Something patient tries the handle once, twice — then waits. Through the keyhole: an eye, pale as a boiled pearl. \"Until true dark,\" she whispers through the iron. The stairs are your only way now.",
+      "choices": [
+        { "label": "Climb the stairs", "target": "stairs" }
+      ]
+    },
+    {
+      "id": "storeroom",
+      "label": "The Storeroom",
+      "text": "You wedge yourself between coiled rope and paraffin crates. The singing spirals down, passes your door — and stops. Through the crack you see bare, gray feet standing in seawater that shouldn't be there. \"I can hear your heart,\" the voice says pleasantly. \"It's very loud.\" The feet turn away and climb again. In the crate beside you: a signal flare, still dry.",
+      "choices": [
+        { "label": "Take the flare and follow her up", "target": "stairs" },
+        { "label": "Bolt for the door and the open island", "target": "flee_island" }
+      ]
+    },
+    {
+      "id": "flee_island",
+      "label": "Fleeing",
+      "text": "You burst out into the last light. The island is a quarter mile of rock and heather — nowhere to go but the ferry landing, where there is no ferry until dawn. Behind you, at the top of the dark tower, a silhouette watches from the lamp gallery. It does not chase. It knows the island is small and the night is long.",
+      "choices": [
+        { "label": "Hide in the cottage until dawn", "target": "cottage_night" },
+        { "label": "Go back and face the tower", "target": "stairs" }
+      ]
+    },
+    {
+      "id": "cottage_night",
+      "label": "The Long Night",
+      "text": "You barricade the cottage door with the dresser and sit in Silas's chair, gripping a fire iron. The singing circles the cottage all night, sometimes near, sometimes far, always patient. At some point you sleep, though you'd swear you didn't. You dream of a lamp burning underwater.",
+      "choices": [
+        { "label": "Wake at dawn", "target": "ending_dawn_hollow" }
+      ]
+    },
+    {
+      "id": "stairs",
+      "label": "The Stairs",
+      "text": "Two hundred steps, each one wet with sea-slick that has no business being here. Halfway up, a window slit shows the last red sliver of sun drowning in the sea. On the landing above sits a hurricane lamp — and beside it, propped like a doll, is Silas. He is gray and still, but when you kneel, his eyes open. \"You came,\" he rasps. \"The oil. Did you bring the oil?\"",
+      "choices": [
+        { "label": "\"Yes — hold on.\" Carry him up with you", "target": "carry_silas", "requires": "take_supplies" },
+        { "label": "Leave him and race to the lamp room", "target": "lamp_room" }
+      ]
+    },
+    {
+      "id": "carry_silas",
+      "label": "The Burden",
+      "text": "Silas weighs nothing, like driftwood. As you climb he murmurs the whole story into your collar: the storm of '86, the bride-boat he was too drunk to light the lamp for, the forty years of penance, one night at a time. \"She only comes when it's dark,\" he says. \"She's not cruel. She's just... owed.\" You reach the lamp room as the last light dies.",
+      "choices": [
+        { "label": "Fill the lamp and strike it", "target": "light_the_lamp" }
+      ]
+    },
+    {
+      "id": "lamp_room",
+      "label": "The Lamp Room",
+      "text": "The lamp room is a cage of glass and brass around one great wick. The reservoir is bone dry — Silas must have been rationing for weeks. Below, on the stairs, the singing starts again, unhurried, climbing. Outside the glass, full dark, and in it, far out, the running lights of a fishing boat making straight for the rocks.",
+      "choices": [
+        { "label": "Fill the lamp with the oil you carried", "target": "light_the_lamp", "requires": "take_supplies" },
+        { "label": "Search the lamp room for oil", "target": "search_lamp_room" }
+      ]
+    },
+    {
+      "id": "search_lamp_room",
+      "label": "Searching",
+      "text": "You tear through lockers: charts, a mummified gull, empty tins. Nothing. The singing is at the gallery door now. Then you remember the paraffin crates in the storeroom — two hundred steps down — and the fishing boat's lights, closer, and the door handle beginning, gently, to turn.",
+      "choices": [
+        { "label": "Burn what you have — charts, rope, the chair", "target": "desperate_fire" },
+        { "label": "Open the door and face her", "target": "face_her" }
+      ]
+    },
+    {
+      "id": "desperate_fire",
+      "label": "Desperate Fire",
+      "text": "You heap the lamp cage with everything that will burn and strike a match. The fire catches — wrong, smoky, guttering — but the great lens takes even that ragged light and throws it miles out to sea. The fishing boat's lights swing away from the rocks. Behind you, the door opens. \"Clever,\" says the drowned bride, \"but a fire is not a lamp, and it will not last the night.\"",
+      "choices": [
+        { "label": "Offer to stay and feed the fire till dawn", "target": "ending_new_keeper" },
+        { "label": "Throw the signal flare and run for the shore", "target": "ending_dawn_escape" }
+      ]
+    },
+    {
+      "id": "face_her",
+      "label": "Face to Face",
+      "text": "You open the door. She fills the stairway, hair moving as if underwater. Up close she is not monstrous, only endlessly sad, and endlessly patient. \"Forty years he lit it for me,\" she says. \"Who lights it for him now?\" She looks past you at the dark, dry lamp, and waits for your answer like a tide waits for a shore.",
+      "choices": [
+        { "label": "\"I will. I'll be the keeper.\"", "target": "ending_new_keeper" },
+        { "label": "\"No one. The sea can have the light.\"", "target": "ending_drowned" }
+      ]
+    },
+    {
+      "id": "light_the_lamp",
+      "label": "Lighting the Lamp",
+      "text": "You pour the whale oil with shaking hands, trim the wick, and strike. The flame catches, steadies, swells — and the great lens erupts, a white blade sweeping the sea. The fishing boat veers off the rocks. On the stairs, the singing stops. From the gallery you see her standing on the water in the beam's path, looking up. She raises one hand — farewell or blessing — and folds back into the sea like a wave un-breaking.",
+      "choices": [
+        { "label": "Sit with Silas as the lamp burns", "target": "silas_end" },
+        { "label": "Keep watch alone at the gallery rail", "target": "ending_keeper_dawn" }
+      ]
+    },
+    {
+      "id": "silas_end",
+      "label": "The Keeper Rests",
+      "text": "Silas watches the beam sweep round and round, and something forty years heavy goes out of his face. \"Paid,\" he whispers. \"Paid in full.\" His eyes close. The lamp burns all night on one tin of oil — longer than it should, as if something out in the dark is cupping the flame against the wind.",
+      "choices": [
+        { "label": "Meet the dawn ferry", "target": "ending_paid" }
+      ]
+    },
+    {
+      "id": "ending_paid",
+      "label": "END: Paid in Full",
+      "text": "At dawn the ferryman finds you on the landing with Silas's logbook under your arm. Behind you the lamp is still burning, pale against the sunrise, and you let it burn. The ferryman squints at the tower. \"Forty years I've watched that light,\" he says. \"Never seen it look like that. Like it's... finished.\" You ride home in silence. THE END — Paid in Full.",
+      "ending": true
+    },
+    {
+      "id": "ending_keeper_dawn",
+      "label": "END: The Long Watch",
+      "text": "You stand at the rail until the sky grays, the beam wheeling above you steady as a heartbeat. When the dawn ferry comes, you wave it off. Someone has to trim the wick. Someone has to keep the promise. The Trinity House letter confirming your appointment arrives three weeks later, addressed to \"The Keeper, Gray Hollow Light\" — as if the sea had already filed the paperwork. THE END — The Long Watch.",
+      "ending": true
+    },
+    {
+      "id": "ending_new_keeper",
+      "label": "END: The New Keeper",
+      "text": "\"Then it is yours,\" she says, \"and so is the debt.\" She teaches you the ballad as the fire burns — the one you'll sing to remember the wick-trimming hours, the one keepers have hummed here for a hundred years without knowing who wrote it. By dawn the fire is embers and you are, in every way that matters, the keeper of Gray Hollow Light. You suspect you always were. THE END — The New Keeper.",
+      "ending": true
+    },
+    {
+      "id": "ending_dawn_escape",
+      "label": "END: The Flare",
+      "text": "The flare arcs red over the water as you take the stairs three at a time. A lifeboat, drawn by the light, meets you waist-deep in the surf. As you're hauled aboard you look back: the tower dark, and at the gallery rail two figures standing together, watching you go — one gray, one pale, neither waving. The lifeboat crew won't speak of it. Neither, ever again, will you. THE END — The Flare.",
+      "ending": true
+    },
+    {
+      "id": "ending_dawn_hollow",
+      "label": "END: Gray Hollow",
+      "text": "Dawn comes gray and quiet. The singing has stopped. You walk to the landing on legs like fence posts and the ferry takes you off without questions. But the light of Gray Hollow never burns again, and that winter three boats find the rocks. You read each name in the paper, and each name reads like an accusation. You left the light dark. Some debts just change hands. THE END — Gray Hollow.",
+      "ending": true
+    },
+    {
+      "id": "ending_drowned",
+      "label": "END: The Keeper Below",
+      "text": "Her hand closes over yours, cold as the space between waves. \"Good,\" she says, and the sea comes up to meet you both like a held breath let out. They never find you. But sailors passing Gray Hollow on moonless nights swear they see a light burning far beneath the surface — steady, well-tended, keeping something terrible off the rocks from below. THE END — The Keeper Below.",
+      "ending": true
+    }
+  ]
+}
