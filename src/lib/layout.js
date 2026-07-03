@@ -1,5 +1,5 @@
 // Computes x/y positions for every story node with dagre, ONCE per story.
-// Navigation never re-runs layout — only highlight classes change.
+// Navigation never re-runs layout; only highlight classes change.
 
 import dagre from 'dagre'
 

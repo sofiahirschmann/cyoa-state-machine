@@ -51,7 +51,7 @@ export function validateStory(story) {
   }
 
   // Reachability: BFS from start over all choice edges (ignoring `requires` gating,
-  // which only hides buttons at runtime — the edge still exists in the graph).
+  // which only hides buttons at runtime; the edge still exists in the graph).
   if (story.start && ids.has(story.start) && errors.length === 0) {
     const reachable = new Set([story.start])
     const queue = [story.start]

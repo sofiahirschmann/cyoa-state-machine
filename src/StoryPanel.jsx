@@ -11,6 +11,13 @@ export default function StoryPanel({ story, state, dispatch }) {
       <div className="story-scroll">
         {ending && <div className="ending-banner">THE END</div>}
         <p className="story-text">{node.text}</p>
+        <img
+          key={state.currentId}
+          className="scene-img"
+          src={`${import.meta.env.BASE_URL}scenes/${state.currentId}.jpg`}
+          alt=""
+          onError={(e) => { e.currentTarget.style.display = 'none' }}
+        />
 
         {!ending && (
           <div className="choices">
